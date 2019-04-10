@@ -1,0 +1,103 @@
+@import "constants";
+@import "header";
+@import "footer";
+@import "main-info-slider";
+@import "index-catalog";
+@import "about-company";
+@import "partners";
+@import "why-our-company";
+@import "contacts";
+body {
+    font-family: 'Play', sans-serif;
+    margin-top: -16px;
+    font-size: 14px;
+    color: $b_grey_color;
+    .container {
+        max-width: 1200px;
+    }
+}
+img {
+    max-width: 100%;
+}
+ul {
+    padding: 0;
+    list-style: none;
+}
+button {
+    cursor: pointer;
+}
+input {
+    &:focus {
+        &::-webkit-input-placeholder {opacity: 0; transition: opacity 0.3s ease;}
+        &::-moz-placeholder          {opacity: 0; transition: opacity 0.3s ease;}
+        &:-moz-placeholder           {opacity: 0; transition: opacity 0.3s ease;}
+        &:-ms-input-placeholder      {opacity: 0; transition: opacity 0.3s ease;}
+    }
+}
+input, button {
+    outline: none;
+}
+h2 {
+    text-transform: uppercase;
+    text-align: center;
+    padding-top: 60px;
+    margin-bottom: 20px;
+    font-size: 30px;
+    margin-top: 0;
+}
+h4 {
+    font-size: 18px;
+    font-weight: normal;
+}
+a {
+    display: inline-block;
+    transition: .3s;
+    text-decoration: none;
+    &.icon-white-bar {
+        &::before {
+            display: inline-block;
+            margin-right: 10px;
+            transform: translateY(15%);
+            content: '';
+            width: 15px;
+            height: 12px;
+            background-image: url("../images/icons/bars-white.png");
+        }
+    }
+}
+.link-show-more {
+    display: flex;
+    align-items: center;
+    &::before {
+        content: '';
+        margin-right: 10px;
+        background-image: url("../images/icons/bars-black.png");
+        background-repeat: no-repeat;
+        width: 16px;
+        height: 12px;
+    }
+    span{
+        color: $b_grey_color;
+        display: inline-block;
+        padding-bottom: 2px;
+        border-bottom: 1px solid $l_grey_color;
+    }
+}
+.slider-btn{
+    position: absolute;
+    transform: translateY(-50%);
+    width: 26px;
+    height: 26px;
+    z-index: 1;
+    cursor: pointer;
+}
+.slider-btn.slider-next{
+    background-image: url("../images/icons/arrow-right-white.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.slider-btn.slider-prev{
+    background-image: url("../images/icons/arrow-left-white.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+}

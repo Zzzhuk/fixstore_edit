@@ -1,0 +1,137 @@
+.main-contacts {
+    background: $green_color url("../images/bg-about.png") center center;
+    color: #fff;
+    padding-bottom: 75px;
+    margin-top: 5px;
+    .container-company-address {
+        text-transform: unset;
+        margin-bottom: 5px;
+        padding-left: 10px;
+    }
+}
+.container-top-contacts-section  {
+    margin-bottom: 10px;
+    display: flex;
+    h2 {
+        margin-right: 65px;
+    }
+    .header-links {
+        li {
+            margin-right: 45px;
+            img {
+                margin-right: 22px;
+            }
+            a {
+                span{
+                    font-size: 16px;
+                    color: #fff;
+                    border-color: rgba(255,255,255,0.2);
+                }
+                &:hover {
+                    span {
+                        border-color: rgba(255,255,255,1);
+                    }
+                }
+            }
+            &:last-child span{
+                border-bottom: 1px solid rgba(255,255,255,0.2);
+            }
+        }
+    }
+}
+.container-contacts-map {
+    margin-right: -30px;
+    border-radius: 10px;
+    overflow: hidden;
+}
+.container-ask-question {
+    margin-top: 80px;
+    h4 {
+        text-align: right;
+        padding-right: 100px;
+    }
+}
+.container-form-feedback {
+    padding: 30px 36px 0 42px;
+    position: relative;
+    z-index: 1;
+    form {
+        padding: 28px 0 44px 0;
+        background: $green_color url("../images/bg-about.png") center center;
+        position: relative;
+
+        &::after {
+            content: '';
+            display: block;
+            position: absolute;
+            z-index: -1;
+            height: 117%;
+            width: 227px;
+            border: 1px solid #fad652;
+            right: -36px;
+            top: -33px;
+        }
+    }
+    .form-btn {
+        display: block;
+        background: $yellow_color;
+        color: #fff;
+        border: 0;
+        width: 100%;
+        line-height: 45px;
+        margin-top: 25px;
+    }
+    label {
+        display: flex;
+        align-items: center;
+        margin-top: 20px;
+        font-size: 12px;
+        cursor: pointer;
+        margin-left: 6px;
+        input {
+           & + span{
+                display: inline-block;
+                height: 15px;
+                width: 15px;
+               border-radius: 3px;
+                margin: 0 5px 0 0;
+               background-color: #fff;
+               color: $b_blue_color;
+               text-align: center;
+            }
+            &:checked + span::after{
+                content: url("../images/icons/galochka.svg");
+            }
+        }
+
+        a {
+            margin-left: 5px;
+            text-decoration: underline;
+        }
+    }
+}
+.container-form-input {
+    display: flex;
+    align-items: center;
+    margin-bottom: 14px;
+    padding-bottom: 18px;
+    border-bottom: 1px solid #fff;
+    input {
+        background: none;
+        border: 0;
+        color: #fff;
+        &::-webkit-input-placeholder {color: #fff;}
+        &::-moz-placeholder          {color: #fff;}
+        &:-moz-placeholder           {color: #fff;}
+        &:-ms-input-placeholder      {color: #fff;}
+    }
+    span {
+        margin: 0 15px;
+        width: 22px;
+        height: 22px;
+        img {
+            max-width: 100%;
+        }
+    }
+
+}

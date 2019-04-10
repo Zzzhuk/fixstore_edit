@@ -1,0 +1,180 @@
+header {
+    margin-top: -16px;
+    box-shadow: 0 0 10px #527b2d;
+    z-index: 1;
+    position: relative;
+}
+.container-header-menu {
+    background-color: $green_color;
+}
+.header-menu {
+    display: flex;
+    align-items: center;
+
+    li {
+        flex: 1;
+        &:first-child{
+            max-width: 157px;
+        }
+    }
+    a {
+        width: 100%;
+        line-height: 50px;
+        padding: 0 20px;
+        text-align: center;
+        color: #fff;
+        &.active {
+            color: #000;
+            background-color: $yellow_color;
+        }
+        &:hover {
+            color: #fff;
+            background-color: $b_green_color;
+        }
+    }
+}
+.container-header-logo-and-links {
+    padding-bottom: 10px;
+    border-bottom: 1px solid #e6e6e6;
+    display: flex;
+    .logo {
+        max-width: 157px;
+    }
+    .logo, .text-header-description {
+        flex: 1;
+    }
+    .header-links {
+        flex: 4;
+    }
+}
+.header-links {
+    display: flex;
+    align-items: flex-end;
+    padding-bottom: 6px;
+    justify-content: space-between;
+    margin-left: -14px;
+
+    li {
+        span{
+            display: inline-block;
+            color: $blue_color;
+            line-height: 17px;
+            border-bottom: 1px solid;
+            border-color: rgba(53, 127, 209, .05);
+            transition: .3s;
+            margin-top: 3px;
+            letter-spacing: .5px;
+        }
+        &:last-child {
+            span {
+                border-bottom: 0;
+                color: $b_grey_color;
+            }
+        }
+    }
+    a {
+        line-height: 24px;
+        display: flex;
+        align-items: center;
+        letter-spacing: .8px;
+        img {
+            margin-right: 10px;
+        }
+        &:hover {
+            span {
+                border-color: rgba(53, 127, 209, 1);
+            }
+        }
+    }
+}
+.text-header-description {
+    padding: 0 15px 0 13px;
+    margin-top: 37px;
+    margin-bottom: 0;
+    line-height: 18px;
+    letter-spacing: 1px;
+}
+.container-header-category  {
+    display: flex;
+    align-items: center;
+    margin: 0;
+    a {
+        font-weight: bold;
+        text-transform: uppercase;
+        position: relative;
+        padding: 25px 52px;
+        color: $b_grey_color;
+        &::after {
+            content: '';
+            display: block;
+            position: absolute;
+            right: 20px;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 6px;
+            height: 6px;
+            border-radius: 100px;
+            background-color: #ebebeb;
+        }
+        &:hover {
+            color: $green_color;
+        }
+        &::before {
+            content: '';
+            display: block;
+            position: absolute;
+            left: 10px;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 15px;
+            height: 12px;
+            background-image: url("../images/icons/bars-black.png");
+            background-repeat: no-repeat;
+        }
+    }
+}
+.container-search {
+    display: flex;
+    input {
+        flex: 4;
+        background-color: transparent;
+        border: 0;
+        color: $grey_color;
+        border-bottom: 1px solid $l_grey_color;
+        padding-bottom: 10px;
+        transition: .3s;
+        &:focus {
+            color: $green_color;
+            border-color: $green_color;
+            &::-webkit-input-placeholder {opacity: 0; transition: opacity 0.3s ease;}
+            &::-moz-placeholder          {opacity: 0; transition: opacity 0.3s ease;}
+            &:-moz-placeholder           {opacity: 0; transition: opacity 0.3s ease;}
+            &:-ms-input-placeholder      {opacity: 0; transition: opacity 0.3s ease;}
+        }
+    }
+    button {
+        flex: 1;
+        background-color: transparent;
+        border: 0;
+        img {
+            max-width: 100%;
+        }
+    }
+}
+.container-main-extra-info {
+    padding-top: 34px;
+}
+.item-extra-info {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    img{
+        width: 65px;
+        margin-right: 25px;
+    }
+    .text-extra-info {
+        color: #fff;
+        text-transform: uppercase;
+        line-height: 25px;
+    }
+}

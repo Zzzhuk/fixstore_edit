@@ -1,0 +1,63 @@
+.why-our-company {
+    padding-top: 55px;
+    line-height: 24px;
+    font-size: 16px;
+    color: $grey_color;
+}
+.list-why-our-company {
+    li {
+        display: flex;
+        align-items: flex-start;
+        padding-bottom: 40px;
+        border-bottom: 1px solid $l_grey_color;
+        margin-bottom: 20px;
+        p {
+
+            margin: 0;
+        }
+        img{
+            margin-right: 42px;
+        }
+        h4 {
+            color: $b_grey_color;
+            margin: 0 0 10px;
+        }
+    }
+}
+.container-why-we-text {
+    margin-top: 60px;
+    text-align: left;
+    margin-left: 45px;
+    background: #fff;
+    position: relative;
+    padding-bottom: 20px;
+    &::before {
+        content: '';
+        display: block;
+        position: absolute;
+        z-index: -1;
+        height: 125%;
+        width: 192px;
+        border: 1px solid $green_color;
+        left: -50px;
+        top: -33px;
+    }
+    h2 {
+        padding-top: 0;
+        color: $b_grey_color;
+        text-align: left;
+        line-height: 47px;
+        margin-top: -10px;
+        position: relative;
+        &::after {
+            content: "";
+            display: block;
+            position: absolute;
+            bottom: -20px;
+            left: 0;
+            width: 55px;
+            height: 2px;
+            background: $green_color;
+        }
+    }
+}

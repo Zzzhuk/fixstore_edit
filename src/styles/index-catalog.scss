@@ -1,0 +1,120 @@
+.index-catalog {
+    padding-bottom: 40px;
+}
+.container-main-catalog-tabs {
+    display: flex;
+
+    li {
+        cursor: pointer;
+        flex: 1;
+        text-align: center;
+        font-size: 20px;
+        color: $l_grey_color;
+        &.active, &:hover {
+            color: $green_color;
+        }
+        span {
+            display: inline-block;
+            width: 100%;
+            padding: 23px 10px;
+            border-bottom: 1px solid;
+        }
+    }
+}
+.container-catalog-products.swiper-container  {
+    padding: 100px 0 0 10px;
+}
+.item-catalog-product {
+    background-color: #fff;
+    position: relative;
+    border-radius: 10px;
+    border: 1px solid $l_grey_color;
+    padding: 90px 45px 45px;
+    margin-left: -10px;
+    margin-right: 40px;
+    h4 {
+        a {
+            color: $b_grey_color;
+            &:hover {
+                color: $green_color;
+            }
+        }
+        padding-left: 5px;
+    }
+    .link-show-more {
+        span{
+            color: $green_color;
+        }
+    }
+    &:hover {
+        &::after {
+            background-color: $yellow_color;
+        }
+    }
+    &::after {
+        border-radius: 10px;
+        content: "";
+        display: block;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background-color: $green_color;
+        top: -10px;
+        right: -10px;
+        z-index: -1;
+        transition: .3s;
+    }
+    img {
+        position: absolute;
+        top: 0;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+}
+.names-undercategory {
+    a {
+        position: relative;
+        padding: 10px 30px;
+        font-size: 16px;
+        color: $grey_color;
+        &:hover {
+            color: $green_color;
+            &::before {
+
+                background-color: $green_color;
+            }
+        }
+        &::before {
+            content: "";
+            width: 5px;
+            height: 5px;
+            border: 1px solid $green_color;
+            position: absolute;
+            top: 15px;
+            left: 10px;
+            border-radius: 10px;
+            transition: inherit;
+            background-color: transparent;
+        }
+    }
+    li {
+        border-top: 1px solid #f6f8f9;
+        &:last-child {
+            border-bottom: 1px solid #f6f8f9;
+        }
+    }
+}
+.catalog-button-prev, .catalog-button-next{
+    top: 56%;
+    box-shadow: 2px 2px 5px $l_grey_color;
+    background-color: #fff;
+    border-radius:30px;
+
+}
+.catalog-button-next{
+    right: 45px;
+}
+.catalog-button-prev{
+    left: 35px;
+}

@@ -1,0 +1,74 @@
+footer {
+    padding-top: 32px;
+    background-color: $d_grey_color;
+    .title-category {
+        position: relative;
+        z-index: 1;
+        &::after {
+            content: '';
+            display: block;
+            position: absolute;
+            right: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            height: 1px;
+            background: $grey_color;
+            width: 100%;
+            z-index: -1;
+        }
+        a {
+            background: $d_grey_color;
+            padding-right: 10px;
+            color: $l_grey_color;
+            &:hover {
+                color: $green_color;
+            }
+        }
+    }
+    .names-undercategory {
+        a {
+            color: $grey_color;
+            &::before {
+                display: block;
+                margin-top: 2px;
+                width: 7px;
+                height: 7px;
+                border-color: $grey_color;
+            }
+        }
+        li {
+            border-top: 0;
+            &:last-child {
+                border-bottom: 0;
+            }
+
+        }
+    }
+}
+.under-footer {
+    font-size: 12px;
+    margin-top: 40px;
+    background-color: #323332;
+    align-items: center;
+}
+.under-name-company {
+    padding: 18px 0;
+    letter-spacing: .6px;
+    text-align: center;
+    a{
+        font-weight: bold;
+        text-transform: uppercase;
+        color: $l_grey_color;
+    }
+}
+.under_polytics {
+    text-align: right;
+    a {
+        text-decoration: underline;
+        &:hover {
+            color: $l_grey_color;
+        }
+
+        color: $b_grey_color;
+    }
+}
