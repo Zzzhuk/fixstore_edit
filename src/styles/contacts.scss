@@ -26,6 +26,7 @@
                     font-size: 16px;
                     color: #fff;
                     border-color: rgba(255,255,255,0.2);
+                    padding-bottom: 2px;
                 }
                 &:hover {
                     span {
@@ -74,9 +75,7 @@
     }
     .form-btn {
         display: block;
-        background: $yellow_color;
-        color: #fff;
-        border: 0;
+
         width: 100%;
         line-height: 45px;
         margin-top: 25px;
@@ -88,6 +87,11 @@
         font-size: 12px;
         cursor: pointer;
         margin-left: 6px;
+        a {
+            color: $blue_color;
+            margin-left: 5px;
+            text-decoration: underline;
+        }
         input {
            & + span{
                 display: inline-block;
@@ -96,17 +100,12 @@
                border-radius: 3px;
                 margin: 0 5px 0 0;
                background-color: #fff;
-               color: $b_blue_color;
+
                text-align: center;
             }
-            &:checked + span::after{
-                content: url("../images/icons/galochka.svg");
+            &:checked + span{
+                background: #fff url(../images/icons/galochka.svg) center no-repeat;
             }
-        }
-
-        a {
-            margin-left: 5px;
-            text-decoration: underline;
         }
     }
 }
@@ -129,6 +128,7 @@
         margin: 0 15px;
         width: 22px;
         height: 22px;
+        text-align: center;
         img {
             max-width: 100%;
         }

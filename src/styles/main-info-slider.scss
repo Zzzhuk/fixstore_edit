@@ -73,10 +73,16 @@
         font-size: 16px;
         color: $orange_color;
         display: inline-block;
-        border-bottom: 1px solid #ffa1002e;
         align-items: center;
         &:hover {
-            border-color: transparent;
+            span {
+                border-color: transparent;
+            }
+        }
+        span {
+            transition: .3s;
+            display: inline-block;
+            border-bottom: 1px solid #ffa1002e;
         }
         &::after {
             content: '';

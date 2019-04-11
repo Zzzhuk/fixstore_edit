@@ -35,4 +35,13 @@ $(document).ready(function () {
             prevEl: '.partner-button-prev',
         },
     });
+
+    $(".container-item-service").on("mouseover", function() {
+       $(this).find(".info-item-service").hide();
+       $(this).find(".btn-show-more").show();
+    })
+    $(".container-item-service").on("mouseout", function() {
+        $(this).find(".info-item-service").show();
+        $(this).find(".btn-show-more").hide();
+    });
 });

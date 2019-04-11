@@ -42,7 +42,10 @@
         padding-left: 5px;
     }
     .link-show-more {
-        span{
+
+        color: $green_color;
+        span {
+            transition: .3s;
             color: $green_color;
         }
     }
@@ -72,39 +75,7 @@
     }
 
 }
-.names-undercategory {
-    a {
-        position: relative;
-        padding: 10px 30px;
-        font-size: 16px;
-        color: $grey_color;
-        &:hover {
-            color: $green_color;
-            &::before {
 
-                background-color: $green_color;
-            }
-        }
-        &::before {
-            content: "";
-            width: 5px;
-            height: 5px;
-            border: 1px solid $green_color;
-            position: absolute;
-            top: 15px;
-            left: 10px;
-            border-radius: 10px;
-            transition: inherit;
-            background-color: transparent;
-        }
-    }
-    li {
-        border-top: 1px solid #f6f8f9;
-        &:last-child {
-            border-bottom: 1px solid #f6f8f9;
-        }
-    }
-}
 .catalog-button-prev, .catalog-button-next{
     top: 56%;
     box-shadow: 2px 2px 5px $l_grey_color;

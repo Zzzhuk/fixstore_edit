@@ -58,6 +58,20 @@ module.exports = {
                         }
                     }
                 ]
+            },
+            {
+                // Load all images as base64 encoding if they are smaller than 8192 bytes
+                test: /\.(eot|svg|ttf|woff)$/,
+                use: [
+                    {
+                        loader: 'url-loader',
+                        options: {
+                            // On development we want to see where the file is coming from, hence we preserve the [path]
+                            name: '[path][name].[ext]',
+                            limit: 8192
+                        }
+                    }
+                ]
             }
         ],
     },
@@ -71,7 +85,16 @@ module.exports = {
             template: './src/product.html',
             filename: "product.html",
             inject: true
-
+        }),
+        new HtmlWebpackPlugin({
+            template: './src/simple-page.html',
+            filename: "simple-page.html",
+            inject: true
+        }),
+        new HtmlWebpackPlugin({
+            template: './src/services-catalog.html',
+            filename: "services-catalog.html",
+            inject: true
         })
     ]
 };

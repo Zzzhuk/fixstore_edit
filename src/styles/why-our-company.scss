@@ -3,14 +3,15 @@
     line-height: 24px;
     font-size: 16px;
     color: $grey_color;
+    padding-bottom: 70px;
 }
 .list-why-our-company {
     li {
         display: flex;
         align-items: flex-start;
-        padding-bottom: 40px;
+        padding-bottom: 30px;
         border-bottom: 1px solid $l_grey_color;
-        margin-bottom: 20px;
+        margin-bottom: 30px;
         p {
 
             margin: 0;
@@ -36,13 +37,15 @@
         display: block;
         position: absolute;
         z-index: -1;
-        height: 125%;
+        height: 115%;
         width: 192px;
         border: 1px solid $green_color;
         left: -50px;
         top: -33px;
     }
     h2 {
+        padding-bottom: 30px;
+        margin-bottom: 30px;
         padding-top: 0;
         color: $b_grey_color;
         text-align: left;
@@ -53,7 +56,7 @@
             content: "";
             display: block;
             position: absolute;
-            bottom: -20px;
+            bottom: 0px;
             left: 0;
             width: 55px;
             height: 2px;

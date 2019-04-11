@@ -9,7 +9,6 @@ const OptimizeCssAssetsPlugin = require('optimize-css-assets-webpack-plugin');
 const buildPath = path.resolve(__dirname, 'dist');
 
 module.exports = {
-    devtool: 'source-map',
     entry: {
         index: './src/index.js',
         vendor: ['swiper', 'jquery']
@@ -33,9 +32,6 @@ module.exports = {
                     {
                         // translates CSS into CommonJS
                         loader: 'css-loader',
-                        options: {
-                            sourceMap: true
-                        }
                     },
                     // {
                     //     // Runs compiled CSS through postcss for vendor prefixing
@@ -49,8 +45,20 @@ module.exports = {
                         loader: 'sass-loader',
                         options: {
                             outputStyle: 'expanded',
-                            sourceMap: true,
-                            sourceMapContents: true
+                        }
+                    }
+                ]
+            },
+            {
+                // Load all images as base64 encoding if they are smaller than 8192 bytes
+                test: /\.(ttf|eot|svg|woff)$/,
+                use: [
+                    {
+                        loader: 'file-loader',
+                        options: {
+                            name: 'fonts/[name].[ext]',
+                            limit: 8192,
+                            // publicPath: path.resolve(__dirname, 'dist')
                         }
                     }
                 ]
@@ -80,6 +88,15 @@ module.exports = {
         new HtmlWebpackPlugin({
             template: './src/product.html',
             filename: "product.html",
+            inject: true
+        }),
+        new HtmlWebpackPlugin({
+            template: './src/services-catalog.html',
+            filename: "services-catalog.html",
+            inject: true
+        }),new HtmlWebpackPlugin({
+            template: './src/simple-page.html',
+            filename: "simple-page.html",
             inject: true
         }),
         new CleanWebpackPlugin(buildPath),
@@ -118,9 +135,6 @@ module.exports = {
         new OptimizeCssAssetsPlugin({
             cssProcessor: require('cssnano'),
             cssProcessorOptions: {
-                map: {
-                    inline: false,
-                },
                 discardComments: {
                     removeAll: true
                 }

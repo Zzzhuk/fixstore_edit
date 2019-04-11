@@ -114,21 +114,27 @@ header {
             width: 6px;
             height: 6px;
             border-radius: 100px;
-            background-color: #ebebeb;
+            background-color: $grey_color;
         }
         &:hover {
             color: $green_color;
+            &::before, &::after {
+                color: inherit;
+            }
         }
         &::before {
-            content: '';
+            content: '\e900';
+
+            font-family: "FixStoreIcons";
+            color: $grey_color;
             display: block;
             position: absolute;
             left: 10px;
             top: 50%;
             transform: translateY(-50%);
             width: 15px;
-            height: 12px;
-            background-image: url("../images/icons/bars-black.png");
+            height: 15px;
+
             background-repeat: no-repeat;
         }
     }
@@ -143,6 +149,10 @@ header {
         border-bottom: 1px solid $l_grey_color;
         padding-bottom: 10px;
         transition: .3s;
+        &::-webkit-input-placeholder {color: $l_grey_color}
+        &::-moz-placeholder          {color: $l_grey_color}
+        &:-moz-placeholder           {color: $l_grey_color}
+        &:-ms-input-placeholder      {color: $l_grey_color}
         &:focus {
             color: $green_color;
             border-color: $green_color;
@@ -150,14 +160,19 @@ header {
             &::-moz-placeholder          {opacity: 0; transition: opacity 0.3s ease;}
             &:-moz-placeholder           {opacity: 0; transition: opacity 0.3s ease;}
             &:-ms-input-placeholder      {opacity: 0; transition: opacity 0.3s ease;}
+            & + button {
+                color: $green_color;
+            }
         }
     }
     button {
         flex: 1;
         background-color: transparent;
         border: 0;
-        img {
-            max-width: 100%;
+        font-size: 25px;
+        color: $l_grey_color;
+        &:hover {
+            color: $yellow_color !important;
         }
     }
 }

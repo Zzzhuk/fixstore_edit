@@ -7,6 +7,10 @@
 @import "partners";
 @import "why-our-company";
 @import "contacts";
+@import "breadcrumbs";
+@import "catalog-services/services";
+@import "font";
+@import "simple-page/simple-page";
 body {
     font-family: 'Play', sans-serif;
     margin-top: -16px;
@@ -36,6 +40,7 @@ input {
 }
 input, button {
     outline: none;
+    transition: .3s;
 }
 h2 {
     text-transform: uppercase;
@@ -49,34 +54,51 @@ h4 {
     font-size: 18px;
     font-weight: normal;
 }
+.btn-yellow {
+    background: $yellow_color;
+    color: #fff;
+    font-size: 14px;
+    &:hover {
+        background: $b_green_color;
+    }
+    border: 0;
+}
 a {
     display: inline-block;
     transition: .3s;
     text-decoration: none;
+    &
     &.icon-white-bar {
         &::before {
             display: inline-block;
             margin-right: 10px;
             transform: translateY(15%);
-            content: '';
+            color: #fff;
+            content: '\e900';
             width: 15px;
             height: 12px;
-            background-image: url("../images/icons/bars-white.png");
+            font-family: "FixStoreIcons";
         }
     }
 }
 .link-show-more {
     display: flex;
     align-items: center;
+    &:hover {
+        span {
+            border-color: transparent;
+        }
+    }
     &::before {
-        content: '';
+        content: '\e900';
+        font-family: "FixStoreIcons";
         margin-right: 10px;
-        background-image: url("../images/icons/bars-black.png");
         background-repeat: no-repeat;
         width: 16px;
         height: 12px;
     }
     span{
+        transition: .3s;
         color: $b_grey_color;
         display: inline-block;
         padding-bottom: 2px;
@@ -90,14 +112,88 @@ a {
     height: 26px;
     z-index: 1;
     cursor: pointer;
+    font-family: "FixStoreIcons";
+    border-radius: 30px;
+    background: #fff;
+
+    &:hover {
+        &::after {
+            color: $yellow_color;
+        }
+    }
+    &::after {
+        transition: .3s;
+        color: $green_color;
+        content: "\e902";
+        font-size: 26px;
+        line-height: 26px;
+    }
 }
 .slider-btn.slider-next{
-    background-image: url("../images/icons/arrow-right-white.png");
-    background-repeat: no-repeat;
-    background-size: cover;
+
 }
 .slider-btn.slider-prev{
-    background-image: url("../images/icons/arrow-left-white.png");
-    background-repeat: no-repeat;
-    background-size: cover;
+    transform: translateY(-50%) rotate(180deg);
+}
+.names-undercategory {
+    a {
+        position: relative;
+        padding: 10px 30px;
+        font-size: 16px;
+        color: $grey_color;
+        &.active {
+            color: $green_color;
+            &::before {
+                background-color: $green_color;
+                border-color: $green_color;
+            }
+        }
+        &:hover {
+            color: $green_color;
+            &::before {
+
+                border-color: $green_color;
+            }
+        }
+        &::before {
+            content: "";
+            width: 6px;
+            height: 6px;
+            border: 1px solid $grey_color;
+            position: absolute;
+            top: 15px;
+            left: 10px;
+            border-radius: 10px;
+            transition: inherit;
+            background-color: transparent;
+        }
+    }
+    li {
+        border-top: 1px solid $l_grey_color;
+        &:last-child {
+            border-bottom: 1px solid $l_grey_color;
+        }
+    }
+}
+.description-block {
+    h2, h3 {
+        font-weight: normal;
+        margin: 24px 0;
+        text-align: left;
+        text-transform: none;
+        padding: 0;
+        line-height: 42px
+    }
+    h2 {
+        font-size: 30px;
+    }
+    h3 {
+        font-size: 24px;
+    }
+    p {
+        font-size: 16px;
+        color: $grey_color;
+        margin: 0;
+        line-height: 27px;
+    }
 }
