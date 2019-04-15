@@ -59,7 +59,7 @@ h4 {
     color: #fff;
     font-size: 14px;
     &:hover {
-        background: $b_green_color;
+        background: $orange_color;
     }
     border: 0;
 }
@@ -67,7 +67,6 @@ a {
     display: inline-block;
     transition: .3s;
     text-decoration: none;
-    &
     &.icon-white-bar {
         &::before {
             display: inline-block;
@@ -84,6 +83,8 @@ a {
 .link-show-more {
     display: flex;
     align-items: center;
+    background-color: transparent;
+    border: 0;
     &:hover {
         span {
             border-color: transparent;

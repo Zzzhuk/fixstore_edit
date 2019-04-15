@@ -1,6 +1,18 @@
 .index-catalog {
     padding-bottom: 40px;
+    .names-undercategory {
+        li {
+            border-bottom: 1px solid #edf1f4;
+            border-top: 0;
+            &:first-child{
+                border-top: 1px solid #edf1f4;
+            }&:last-child{
+                border-bottom: 0;
+            }
+        }
+    }
 }
+
 .container-main-catalog-tabs {
     display: flex;
 
@@ -42,11 +54,12 @@
         padding-left: 5px;
     }
     .link-show-more {
-
+        display: none;
         color: $green_color;
         span {
             transition: .3s;
             color: $green_color;
+            border-color: $green_color;
         }
     }
     &:hover {

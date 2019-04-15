@@ -59,10 +59,10 @@ header {
             display: inline-block;
             color: $blue_color;
             line-height: 17px;
-            border-bottom: 1px solid;
-            border-color: rgba(53, 127, 209, .05);
+            border-bottom: 1px solid transparent;
+            margin-top: 5px;
             transition: .3s;
-            margin-top: 3px;
+
             letter-spacing: .5px;
         }
         &:last-child {
@@ -102,7 +102,7 @@ header {
         font-weight: bold;
         text-transform: uppercase;
         position: relative;
-        padding: 25px 52px;
+        padding: 25px 55px;
         color: $b_grey_color;
         &::after {
             content: '';
@@ -114,17 +114,21 @@ header {
             width: 6px;
             height: 6px;
             border-radius: 100px;
-            background-color: $grey_color;
+            background-color: $l_grey_color;
+            transition: .3s;
         }
         &:hover {
             color: $green_color;
-            &::before, &::after {
-                color: inherit;
+            &::before {
+                color: $green_color;
+            }
+            &::after {
+                background-color: $green_color;
             }
         }
         &::before {
             content: '\e900';
-
+            transition: .3s;
             font-family: "FixStoreIcons";
             color: $grey_color;
             display: block;
@@ -147,7 +151,7 @@ header {
         border: 0;
         color: $grey_color;
         border-bottom: 1px solid $l_grey_color;
-        padding-bottom: 10px;
+        padding-bottom: 5px;
         transition: .3s;
         &::-webkit-input-placeholder {color: $l_grey_color}
         &::-moz-placeholder          {color: $l_grey_color}

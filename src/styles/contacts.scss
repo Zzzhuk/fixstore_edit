@@ -114,15 +114,22 @@
     align-items: center;
     margin-bottom: 14px;
     padding-bottom: 18px;
-    border-bottom: 1px solid #fff;
+    border-bottom: 1px solid #e5f0d0;
+    transition: .3s;
+    &:hover, &:focus {
+        border-color: #fff;
+    }
     input {
         background: none;
         border: 0;
-        color: #fff;
+        color: #e5f0d0;
         &::-webkit-input-placeholder {color: #fff;}
         &::-moz-placeholder          {color: #fff;}
         &:-moz-placeholder           {color: #fff;}
         &:-ms-input-placeholder      {color: #fff;}
+        &:hover, &:focus {
+            color: #fff;
+        }
     }
     span {
         margin: 0 15px;

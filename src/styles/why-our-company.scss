@@ -12,6 +12,9 @@
         padding-bottom: 30px;
         border-bottom: 1px solid $l_grey_color;
         margin-bottom: 30px;
+        &:last-child {
+            border-bottom: 0;
+        }
         p {
 
             margin: 0;
